@@ -1,62 +1,150 @@
-// =====================================================================================================================
-.header {
-  width: 100%;
-  &.sticky {
-    // ..стили для липкого хедера
+@mixin nav-text {
+  font: {
+    family: 'Idealist';
+    style: normal;
+    weight: 400;
+    size: 18px;
   }
-  // .header__container
-  &__container {
-    height: rem($headerHeight);
-    display: flex;
-    align-items: center;
-  }
-}
-// =====================================================================================================================
 
-// Burger
-/*
-.icon-menu {
-  display: none;
-  @include media(767) {
-    display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
+  line-height: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+//style
+.header {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url('./../../images/main_bkg/main_bkg.png');
+  background-image: image-set(url('./../../images/main_bkg/main_bkg.png') 1x,
+      url('./../../images/main_bkg/main_bkg@2x.png') 2x,
+      url('./../../images/main_bkg/main_bkg@3x.png') 3x,
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media(max-width: 550px) {
+    padding: 0 20px;
+    background-image: url('./../../images/mobile_bkg/mobile_bkg.png');
+    background-image: image-set(url('./../../images/mobile_bkg/mobile_bkg.png') 1x,
+        url('./../../images/mobile_bkg/mobile_bkg@2x.png') 2x,
+        url('./../../images/mobile_bkg/mobile_bkg@3x.png') 3x,
+      );
+  }
+}
+
+.header-nav__main-nav,
+.header-nav__link-nav,
+.link-nav__link-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container {
+  padding: 40px 0;
+}
+
+.link-nav__link-nav-list {
+  margin-bottom: 0;
+}
+
+.logo_header {
+  max-width: 284px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    max-width: 200px;
+    width: 100%;
+  }
+}
+
+.link-nav-list__link-item {
+  & a {
+    @include nav-text;
+
+    &:not(:last-child) {
+      margin-right: 42px;
     }
-    &::before {
-      top: 0;
+
+    &:last-child {
+      margin-right: 40px;
     }
-    &::after {
-      bottom: 0;
+
+    &:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
     }
-    span {
-      top: calc(50% - rem(1));
-    }
-    .menu-open & {
-      span {
-        width: 0;
-      }
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
+
+    @media (max-width: 1200px) {
+      margin-right: 20px !important;
     }
   }
 }
-*/
+
+.button {
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 100px;
+  padding: 15px 36px;
+  width: fit-content;
+  @include nav-text;
+
+  &:hover,
+  &:focus {
+    background: #FFFFFF;
+    border-radius: 100px;
+    color: #272726;
+  }
+  @media(max-width: 450px){
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 165px;
+  padding-bottom: 140px;
+
+  .header-text__title {
+    font-family: 'Benzin';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    @media(max-width: 600px){
+      font-size: 40px;
+      line-height: 50px;
+    }
+    @media(max-width: 450px){
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .header-text_text {
+    @include nav-text;
+    line-height: 28px;
+    max-width: 620px;
+    width: 100%;
+    margin-bottom: 50px;
+    @media(max-width: 450px){
+      font-size: 12px;
+      line-height: 18px;
+      max-width: 320px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}

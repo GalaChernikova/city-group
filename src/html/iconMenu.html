@@ -1,3 +1,224 @@
-<button class="header__burger icon-menu">
-  <span></span>
+<button class="nav-button">
+    <span class="nav-button-icon"></span>
 </button>
+
+<div class="mobile-nav">
+    <div class="nav">
+
+
+        <div class="header-nav__link-nav nav-list">
+            <ul class="link-nav__link-nav-list">
+                <li class="link-nav-list__link-item"><a href="#">Услуги и цены</a></li>
+                <li class="link-nav-list__link-item"><a href="#">О компании</a></li>
+                <li class="link-nav-list__link-item"><a href="#">Отзывы</a></li>
+                <li class="link-nav-list__link-item"><a href="#">Контакты</a></li>
+            </ul>
+
+            <address>
+                <p>Тел.:<a href="tel: +79581119607"> +79581119607</a></p> 
+                <p>email:<a href="mailto:citygroup@gmail.com"> citygroup@gmail.com</a></p>
+            </address>
+
+        </div>
+    </div>
+</div>
+
+  @@include('./header_text.html', {})
+
+
+
+<style>
+    /* address */
+    address {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 309px;
+        width: 100%;
+        margin-right: auto;
+        margin-left: 30px;
+        margin-top: 35px;
+    }
+
+    address a,
+    address p{
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    /* nav button */
+    .nav-button {
+        position: relative;
+        z-index: 9;
+        display: none;
+        height: 25px;
+        border: none;
+        padding: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .nav-button:focus,
+    .nav-button:active {
+        outline: none;
+    }
+
+    /* X */
+    .nav-button-close .nav-button-icon {
+        background-color: transparent;
+    }
+
+    .nav-button-close .nav-button-icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-button-close .nav-button-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    /* nav icon */
+    .nav-button-icon {
+        display: block;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        width: 9px;
+        float: right;
+        height: 2px;
+        border: none;
+    }
+
+    .nav-button-icon::before {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        content: '';
+        display: block;
+        background-color: rgb(255, 255, 255);
+        width: 18px;
+        height: 2px;
+    }
+
+    .nav-button-icon::after {
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        content: '';
+        display: block;
+        background-color: rgb(255, 255, 255);
+        width: 18px;
+        height: 2px;
+    }
+
+
+    /* mobile nav */
+    .mobile-nav {
+        position: fixed;
+        z-index: 8;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        opacity: 1;
+        padding: 0 70px 50px 30px;
+
+    }
+
+    .mobile-nav .nav {
+        display: block;
+        padding-top: 40px !important;
+    }
+
+    .mobile-nav .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .mobile-nav .nav ul li {
+        margin: 0;
+        margin-bottom: 35px;
+    }
+
+    .mobile-nav .nav ul li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    /* blur */
+    .hidden {
+        visibility: hidden;
+    }
+
+
+
+
+    /* media */
+    @media (max-width: 1000px) {
+        .nav-container {
+            display: none;
+        }
+
+        .nav-button {
+            display: block;
+            padding-left: 30px;
+            padding-top: 24px;
+            margin-left: auto;
+            transform: scale(-1, 1);
+        }
+
+        .mobile-nav-active {
+            display: flex;
+        }
+
+        .header-nav__link-nav {
+            flex-direction: column;
+        }
+    }
+</style>
+
+
+<script>
+    //menu
+    const navBtn = document.querySelector(".nav-button");
+    const mobileNav = document.querySelector(".mobile-nav");
+    const container = document.getElementById('header-text');
+    const body = document.body;
+
+    function toggleMobileNav() {
+        mobileNav.classList.toggle("mobile-nav-active");
+        navBtn.classList.toggle("nav-button-close");
+        container.classList.toggle('hidden');
+        body.classList.toggle("no-scroll");
+    }
+
+    navBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        toggleMobileNav();
+    });
+
+    window.addEventListener("click", function () {
+        if (body.classList.contains("no-scroll")) {
+            toggleMobileNav();
+        }
+    });
+
+    mobileNav.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+
+</script>
