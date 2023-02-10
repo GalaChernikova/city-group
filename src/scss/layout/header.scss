@@ -11,12 +11,17 @@
   text-decoration: none;
 }
 
-
-//style
-.header {
+@mixin screen-width{
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+
+
+//style
+.header {
+  @include screen-width;
+  
   background-image: url('./../../images/main_bkg/main_bkg.png');
   background-image: image-set(url('./../../images/main_bkg/main_bkg.png') 1x,
       url('./../../images/main_bkg/main_bkg@2x.png') 2x,
@@ -24,11 +29,9 @@
     );
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 0px 0px 15px 15px;
 
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-
-  @media(max-width: 550px) {
+  @media(max-width: 650px) {
     padding: 0 20px;
     background-image: url('./../../images/mobile_bkg/mobile_bkg.png');
     background-image: image-set(url('./../../images/mobile_bkg/mobile_bkg.png') 1x,
