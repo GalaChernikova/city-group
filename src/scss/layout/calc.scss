@@ -33,7 +33,7 @@
         );
 }
 
-.step-title__number--dark {
+.step-title__number--circle {
     margin: 0 !important;
 }
 
@@ -106,6 +106,8 @@
     margin-bottom: 66px;
 
     @media (max-width: 500px) {
+        font-size: 12px;
+        line-height: 22px;
         margin-bottom: 34px;
     }
 
