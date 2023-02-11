@@ -1,0 +1,153 @@
+<style>
+    .serviceSwiper {
+        width: 100%;
+        height: 32%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-slide {
+        width: 407px !important;
+        font-size: 18px;
+        background: #272726;
+        border-radius: 20px;
+        height: calc((100% - 30px) / 2) !important;
+
+        /* Center slide text vertically */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 33px 41px;
+
+    }
+
+    .service-slide__title {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 35px;
+
+        color: #FFFFFF;
+        margin-bottom: 97px;
+        max-width: 325px;
+        width: 100%;
+        min-height: 70px;
+    }
+
+    .service-slide__price {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        color: #8C8C8C;
+    }
+
+     @media (max-width: 1300px) {
+
+        .service-slide {
+            width: 375px !important;
+            height: 277px !important;
+            margin-top: 0 !important;
+            margin-bottom: 20px;
+        }
+        .serviceSwiper {
+            height: 35%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .serviceSwiper {
+            height: 100%;
+        }
+    }
+    @media (max-width: 500px){
+        .service-slide {
+            width: 236px !important;
+            height: 151px !important;
+            padding: 16px 20px;
+        }
+        .service-slide__title{
+            font-size: 18px;
+            line-height: 23px;
+            margin-bottom: 30px;
+        }
+        .service-slide__price{
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper serviceSwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide service-slide">
+            <div class="service-slide__text"></div>
+            <h4 class="service-slide__title">Укладка теплого
+                водяного пола</h4>
+            <p class="service-slide__price">от 4950 ₽</p>
+        </div>
+        <div class="swiper-slide service-slide">
+            <h4 class="service-slide__title">Обвязка котла</h4>
+            <p class="service-slide__price">от 4950 ₽</p>
+        </div>
+        <div class="swiper-slide service-slide">
+            <h4 class="service-slide__title">Монтаж бойлера
+                косвенного нагрева</h4>
+            <p class="service-slide__price">от 4950 ₽</p>
+        </div>
+        <div class="swiper-slide service-slide">
+            <h4 class="service-slide__title">Монтаж котла</h4>
+            <p class="service-slide__price">от 4950 ₽</p>
+        </div>
+        <div class="swiper-slide service-slide">
+            <h4 class="service-slide__title">Установка радиаторов 
+                отопления</h4>
+            <p class="service-slide__price">от 4950 ₽</p>
+        </div>
+        <div class="swiper-slide service-slide">
+            <h4 class="service-slide__title">Пуско-накладка
+                всех систем</h4>
+            <p class="service-slide__price">от 4950 ₽</p>
+        </div>
+    </div>
+    <!-- <div class="swiper-pagination"></div> -->
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".serviceSwiper", {
+        slidesPerView: 3,
+        grid: {
+            rows: 2,
+        },
+        spaceBetween: 20,
+        loop: true,
+        mousewheel: true,
+        keyboard: true,
+        breakpoints: {
+            // mobile + tablet - 320-990
+            320: {
+                // loop: false,
+                grid: {
+                    rows: 1,
+                },
+
+            },
+            // desktop >= 991
+            1200: {
+                slidesPerView: 3,
+                grid: {
+                    rows: 2,
+                },
+            }
+        },
+    });
+</script>
