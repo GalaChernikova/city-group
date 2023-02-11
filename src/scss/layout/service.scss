@@ -1,4 +1,6 @@
 .service{
+    position: relative;
+    top: 15px;
     @include screen-width;
     background: #FAF9F9;
     padding: 0 0 140px;

@@ -1,0 +1,129 @@
+.calc {
+    @include screen-width;
+    background: #272726;
+    padding: 95px 0 100px;
+    border-radius: 0px 0px 15px 15px;
+
+    @media(max-width: 650px) {
+        padding: 0 20px 100px;
+    }
+}
+
+.step-title--dark {
+    position: relative;
+    left: -30px;
+
+    @media (max-width: 500px) {
+        padding-top: 20px
+    }
+
+}
+
+.step-title__number--dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 161px;
+    height: 161px;
+    background-image: url('./../../images/number_bkg/number_bkg.png');
+    background-image: image-set(url('./../../images/number_bkg/number_bkg.png') 1x,
+            url('./../../images/number_bkg/number_bkg@2x.png') 2x,
+            url('./../../images/number_bkg/number_bkg@3x.png') 3x,
+        );
+}
+
+.step-title__number--dark {
+    margin: 0 !important;
+}
+
+.step-title__text--dark {
+    color: #FFFFFF !important;
+    margin-bottom: 0 !important;
+    position: relative;
+    left: -15px;
+}
+
+.calc-title {
+    font-family: 'Benzin';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+
+    color: #FFFFFF;
+    margin-bottom: 35px;
+    max-width: 550px;
+    width: 100%;
+
+    @media (max-width: 500px) {
+        font-size: 20px;
+        line-height: 25px;
+        max-width: 230px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.text-calc-text {
+    font-family: 'Idealist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+    margin-bottom: 60px;
+
+    max-width: 727px;
+    width: 100%;
+
+    @media (max-width: 500px) {
+        font-size: 12px;
+        line-height: 18px;
+        max-width: 320px;
+        width: 100%;
+        margin-bottom: 79px;
+    }
+}
+
+.tel-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tel-form__input {
+    font-family: 'Idealist';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #8C8C8C;
+
+    background: transparent;
+    padding: 20px 0;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 66px;
+
+    @media (max-width: 500px) {
+        margin-bottom: 34px;
+    }
+
+    &:last-child {
+        margin-bottom: 68px;
+
+        @media (max-width: 500px) {
+            margin-bottom: 50px;
+        }
+    }
+    
+}
+.tel-form__button{
+    @media (max-width: 500px){
+        width: 100%;
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
