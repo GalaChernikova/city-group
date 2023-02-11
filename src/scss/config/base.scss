@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     touch-action: none;
   }
-  background: #FAF9F9 !important;
+  // background: #FAF9F9 !important;
 }
 // Базовые анимации:
 // @import "keyframes";
@@ -66,6 +66,10 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  background: #FAF9F9 !important;
+  margin: 0 auto;
   min-height: 100%;
   overflow: hidden; // clip - если используется в проекте position: sticky
 }
