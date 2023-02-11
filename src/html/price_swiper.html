@@ -1,0 +1,145 @@
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .price-slide {
+        max-width: 407px;
+        width: 100%;
+        height: 370px;
+
+        background: #272726;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 34px 124px 40px 40px;
+    }
+
+    .slide--bkg {
+        background-image: url('./../images/heating_bkg/heating_bkg.png');
+        background-image: image-set(url('./../images/heating_bkg/heating_bkg.png') 1x,
+                url('./../images/heating_bkg/heating_bkg@2x.png') 2x,
+                url('./../images/heating_bkg/heating_bkg@3x.png') 3x,
+            );
+    }
+
+    .swiper-slide img {
+        display: block;
+        object-fit: cover;
+    }
+
+    .price-slide__title {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 32px;
+
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        max-width: 150px;
+        width: 100%;
+    }
+
+    .price-slide__price {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        color: #8C8C8C;
+        max-width: 170px;
+        width: 100%;
+        margin: 0 !important;
+    }
+    .price-slide__button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+        width: 265px;
+        height: 57px;
+    }
+
+    .price-slide__icon-arrow {
+        width: 26px;
+        height: 24px;  
+        margin-left: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper priceSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide price-slide slide--bkg">
+                <div class="price-slide__title-box">
+                    <h4 class="price-slide__title">Площадь:
+                        до 100 м²</h4>
+                    <p class="price-slide__price">от 120000 ₽</p>
+                </div>
+
+                <button type="submit" class="button price-slide__button">Заказать расчет
+                    <img src="./../images/icons/icon_arrow.svg" alt="icon_arrow" class="price-slide__icon-arrow">
+                </button>
+            </div>
+            <div class="swiper-slide  price-slide">
+                <div class="price-slide__title-box">
+                    <h4 class="price-slide__title">Площадь:
+                        100-200 м²</h4>
+                    <p class="price-slide__price">180000–250000 ₽ </p>
+                </div>
+
+                <button type="submit" class="button price-slide__button">Заказать расчет
+                    <img src="./../images/icons/icon_arrow.svg" alt="icon_arrow" class="price-slide__icon-arrow">
+                </button>
+            </div>
+            <div class="swiper-slide  price-slide">
+                <div class="price-slide__title-box">
+                    <h4 class="price-slide__title">Площадь:
+                        200-300 м²</h4>
+                    <p class="price-slide__price">220000–330000 ₽</p>
+                </div>
+
+                <button type="submit" class="button price-slide__button">Заказать расчет
+                    <img src="./../images/icons/icon_arrow.svg" alt="icon_arrow" class="price-slide__icon-arrow">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".priceSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            mousewheel: true,
+            keyboard: true,
+            breakpoints: {
+                // mobile + tablet - 320-990
+                320: {
+                    centeredSlides: true,
+                    slidesPerView: "auto",
+                    spaceBetween: 10,
+                    loop: false,
+
+                },
+                // desktop >= 991
+                991: {
+                    centeredSlides: false,
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+
+                }
+            },
+        });
+    </script>

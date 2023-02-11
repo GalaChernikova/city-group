@@ -1,0 +1,30 @@
+.price {
+    @include screen-width;
+    background: #FAF9F9;
+    padding: 0 0 140px;
+
+    @media(max-width: 650px) {
+        padding: 140px 20px 100px;
+    }
+}
+
+.price-title {
+    font-family: 'Benzin';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+    color: #272726;
+    margin-bottom: 34px;
+}
+
+.text-price-text {
+    font-family: 'Idealist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #8C8C8C;
+    margin-bottom: 80px;
+}
