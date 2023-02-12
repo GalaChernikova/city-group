@@ -1,0 +1,21 @@
+.work-steps{
+    @include screen-width;
+    background: #272726;
+    padding: 95px 0 170px;
+    border-radius: 0px 0px 15px 15px;
+
+    background-image: url('./../../images/stage_bkg/stage_bkg.png');
+    background-image: image-set(url('./../../images/stage_bkg/stage_bkg.png') 1x,
+            url('./../../images/stage_bkg/stage_bkg@2x.png') 2x,
+            url('./../../images/stage_bkg/stage_bkg@3x.png') 3x,
+        );
+    background-size: cover;
+
+    @media(max-width: 1400px){
+        background-position-x: right;
+    }
+
+    @media(max-width: 650px) {
+        padding: 0 20px 94px;
+    }
+}

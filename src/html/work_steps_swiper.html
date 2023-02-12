@@ -1,0 +1,116 @@
+<style>
+    .workStepsSwiper {
+        width: 100%;
+        height: 100%;
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .work-steps-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        visibility: hidden;
+    }
+
+    .work-steps-next,
+    .work-steps-prev {
+        position: relative;
+        top: 165px;
+
+        visibility: visible;
+        border: none;
+        background: transparent;
+    }
+
+    .work-steps-prev {
+        left: 745px;
+    }
+
+    @media (max-width: 1400px) {
+        .workStepsSwiper {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        .work-steps-prev {
+            left: 785px;
+        }
+
+    }
+
+    @media (max-width: 1000px) {
+        .work-steps-prev {
+            left: 15px;
+        }
+    }
+
+    @media (max-width: 1000px) {
+
+        .work-steps-next img,
+        .work-steps-prev img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper workStepsSwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide work-steps-slide">
+            <h2 class="title calc-title work-steps-title">Выезд на объект + смета</h2>
+            <p class="title__text text-calc-text work-steps-text">
+                • Специалист нашей компании приедет на Ваш объект,
+                ознакомиться с фронтом работ и сделает необходимые замеры. Затем бесплатно составит фиксированную смету.
+                <br>
+                • В проекте указывается точное расположение отопительного оборудования, точные характеристики системы
+                (мощность, производительность и т. д.), список оборудования, материалов и их количество.
+            </p>
+        </div>
+        <div class="swiper-slide work-steps-slide">
+            <h2 class="title calc-title work-steps-title">Подготовительный этап</h2>
+            <p class="title__text text-calc-text work-steps-text">
+                • Вы оставляете заявку или звоните по телефону +79581119607 в удобное для Вас время.
+                <br>
+                • Наш инженер проконсультирует Вас по выбору системы отопления вашего дома, материалам для отопления и
+                пришлет Вам несколько вариантов предварительной сметы. Сметы составляются с учетом ваших требований и
+                пожеланий.
+            </p>
+        </div>
+    </div>
+    <div class="swiper-button-next">
+        <button class="work-steps-next">
+            <img src="./../images/icons/icon_arrow_right_white.svg" alt="icon_arrow_right_white"
+                onmouseout="this.src='./../images/icons/icon_arrow_right_white.svg'"
+                onmouseover="this.src='./../images/icons/icon_arrow_right_black.svg'">
+        </button>
+    </div>
+    <div class="swiper-button-prev">
+        <button class="work-steps-prev">
+            <img src="./../images/icons/icon_arrow_left_white.svg" alt="icon_arrow_left_white"
+                onmouseout="this.src='./../images/icons/icon_arrow_left_white.svg'"
+                onmouseover="this.src='./../images/icons/icon_arrow_left_black.svg'">
+        </button>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".workStepsSwiper", {
+        navigation: {
+            nextEl: ".work-steps-next",
+            prevEl: ".work-steps-prev",
+        },
+    });
+</script>
