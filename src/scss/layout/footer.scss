@@ -35,6 +35,10 @@
 
   color: #272726;
   text-decoration: none; 
+  &:hover {
+    color: #272726;
+    text-decoration: underline;
+  }
   @media (max-width: 500px){
     line-height: 24px;
   }
@@ -51,6 +55,10 @@
     color: #272726;
     text-decoration: none;  
     margin-bottom: 0;  
+  }
+  & a:hover {
+    color: #272726;
+    text-decoration: underline;
   }
 }
 .footer-logo{
@@ -82,6 +90,10 @@
 .design-link{
   color: #8C8C8C;
   text-decoration: none;
+  &:hover {
+    color: #8C8C8C;
+    text-decoration: underline;
+  }
   @media (max-width: 1000px){
     position: relative;
     top: 400px;
