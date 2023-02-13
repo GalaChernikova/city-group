@@ -2,15 +2,17 @@
     .workStepsSwiper {
         width: 100%;
         height: 100%;
-        margin-top: 40px;
-        padding-bottom: 40px;
+        padding: 40px 0 80px;
     }
 
     .work-steps-slide {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
+    }
+
+    .work-steps-slide__text-container {
+        margin-top: 55px;
     }
 
     .swiper-button-next,
@@ -21,7 +23,7 @@
     .work-steps-next,
     .work-steps-prev {
         position: relative;
-        top: 165px;
+        top: 215px;
 
         visibility: visible;
         border: none;
@@ -29,7 +31,7 @@
     }
 
     .work-steps-prev {
-        left: 745px;
+        left: 1175px;
     }
 
     @media (max-width: 1400px) {
@@ -38,6 +40,14 @@
             width: 100%;
             margin: 0 auto;
             padding-bottom: 80px;
+        }
+
+        .work-steps-slide {
+            flex-direction: column;
+        }
+
+        .work-steps-slide__text-container {
+            margin-top: 0;
         }
 
         .work-steps-prev {
@@ -50,14 +60,35 @@
         .work-steps-prev {
             left: 15px;
         }
+
+        .work-steps-next,
+        .work-steps-prev {
+            top: 300px;
+        }
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 500px) {
+        .workStepsSwiper {
+            padding-bottom: 0;
+        }
+
+        .work-steps-next,
+        .work-steps-prev {
+            top: 260px;
+        }
 
         .work-steps-next img,
         .work-steps-prev img {
             width: 30px;
             height: 30px;
+        }
+
+        .work-steps-slide {
+            justify-content: center;
+        }
+
+        .step-title--dark--slider {
+            padding-top: 0;
         }
     }
 </style>
@@ -66,25 +97,52 @@
 <div class="swiper workStepsSwiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide work-steps-slide">
-            <h2 class="title calc-title work-steps-title">Выезд на объект + смета</h2>
-            <p class="title__text text-calc-text work-steps-text">
-                • Специалист нашей компании приедет на Ваш объект,
-                ознакомиться с фронтом работ и сделает необходимые замеры. Затем бесплатно составит фиксированную смету.
-                <br>
-                • В проекте указывается точное расположение отопительного оборудования, точные характеристики системы
-                (мощность, производительность и т. д.), список оборудования, материалов и их количество.
-            </p>
+            <div class="step-title step-title--dark step-title--dark--slider">
+                <div class="step-title__number--dark">
+                    <p class="step-title__number step-title__number--circle">05</p>
+                </div>
+
+                <p class="step-title__text step-title__text--dark">Этапы работы</p>
+            </div>
+
+            <div class="work-steps-slide__text-container">
+                <h2 class="title calc-title work-steps-title">Подготовительный этап</h2>
+                <p class="title__text text-calc-text work-steps-text">
+                    • Вы оставляете заявку или звоните по телефону +79581119607 в удобное для Вас время.
+                    <br>
+                    • Наш инженер проконсультирует Вас по выбору системы отопления вашего дома, материалам для отопления
+                    и
+                    пришлет Вам несколько вариантов предварительной сметы. Сметы составляются с учетом ваших требований
+                    и
+                    пожеланий.
+                </p>
+            </div>
+
         </div>
         <div class="swiper-slide work-steps-slide">
-            <h2 class="title calc-title work-steps-title">Подготовительный этап</h2>
-            <p class="title__text text-calc-text work-steps-text">
-                • Вы оставляете заявку или звоните по телефону +79581119607 в удобное для Вас время.
-                <br>
-                • Наш инженер проконсультирует Вас по выбору системы отопления вашего дома, материалам для отопления и
-                пришлет Вам несколько вариантов предварительной сметы. Сметы составляются с учетом ваших требований и
-                пожеланий.
-            </p>
+            <div class="step-title step-title--dark">
+                <div class="step-title__number--dark">
+                    <p class="step-title__number step-title__number--circle">06</p>
+                </div>
+
+                <p class="step-title__text step-title__text--dark">Этапы работы</p>
+            </div>
+
+            <div class="work-steps-slide__text-container">
+                <h2 class="title calc-title work-steps-title">Выезд на объект + смета</h2>
+                <p class="title__text text-calc-text work-steps-text">
+                    • Специалист нашей компании приедет на Ваш объект,
+                    ознакомиться с фронтом работ и сделает необходимые замеры. Затем бесплатно составит фиксированную
+                    смету.
+                    <br>
+                    • В проекте указывается точное расположение отопительного оборудования, точные характеристики
+                    системы
+                    (мощность, производительность и т. д.), список оборудования, материалов и их количество.
+                </p>
+            </div>
+
         </div>
+
     </div>
     <div class="swiper-button-next">
         <button class="work-steps-next">

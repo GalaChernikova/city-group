@@ -1,4 +1,4 @@
-.work-steps{
+.work-steps {
     @include screen-width;
     background: #272726;
     padding: 95px 0 170px;
@@ -10,8 +10,9 @@
             url('./../../images/stage_bkg/stage_bkg@3x.png') 3x,
         );
     background-size: cover;
+    background-position-x: right;
 
-    @media(max-width: 1400px){
+    @media(max-width: 1400px) {
         background-position-x: right;
     }
 
