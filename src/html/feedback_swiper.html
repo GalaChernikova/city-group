@@ -1,0 +1,248 @@
+<style>
+    .feedbackSwiper {
+        position: relative;
+        bottom: 270px;
+        width: 100%;
+        height: 100%;
+        padding: 0 0 100px;
+    }
+
+    .feedback-slide {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .feedback-slide img {
+        display: block;
+        width: 100%;
+    }
+
+    .feedback-slide__text {
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 33px 40px 40px;
+        max-width: 619px;
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    .feedback-slide__feedback-text {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        color: #272726;
+    }
+
+    .feedback-slide__name {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 55px;
+
+        color: #8C8C8C;
+        margin-bottom: 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        visibility: hidden;
+    }
+
+    .feedback-next,
+    .feedback-prev {
+        position: relative;
+        top: 415px;
+
+        visibility: visible;
+        border: none;
+        background: transparent;
+    }
+
+    .feedback-prev {
+        visibility: hidden;
+    }
+
+    @media (max-width: 1400px) {
+        .feedbackSwiper {
+            max-width: 630px;
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 80px;
+            bottom: 205px;
+        }
+
+        .feedback-slide {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feedback-slide__text {
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+
+        .feedback-next,
+        .feedback-prev {
+            visibility: visible;
+            top: 505px;
+        }
+
+        .feedback-prev {
+            left: 20px;
+        }
+
+    }
+
+    @media (max-width: 1200px) {
+        .feedbackSwiper {
+            bottom: 25px;
+        }
+
+        .feedback-next,
+        .feedback-prev {
+            top: 495px
+        }
+    }
+
+    @media (max-width: 700px) {
+        .feedbackSwiper {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .feedback-slide__text {
+            padding: 30px;
+        }
+
+        .feedback-next,
+        .feedback-prev {
+            top: 445px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .feedbackSwiper {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .feedback-slide__text {
+            padding: 16px 20px 14px;
+            margin-bottom: 18px;
+        }
+
+        .feedback-slide__feedback-text {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .feedback-slide__name {
+            font-size: 12px;
+            line-height: 18px;
+
+            letter-spacing: -0.02em;
+        }
+
+        .feedback-next,
+        .feedback-prev {
+            top: 310px;
+            width: 34px;
+            height: 34px;
+        }
+
+        .feedback-next img,
+        .feedback-prev img {
+            width: 34px;
+            height: 34px;
+        }
+
+        .feedback-next,
+        .feedback-prev {
+            left: 10px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .feedbackSwiper {
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .feedback-next,
+        .feedback-prev {
+            top: 270px;
+        }
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper feedbackSwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide feedback-slide">
+            <div class="feedback-slide__text">
+                <p class="feedback-slide__feedback-text">
+                    Выполнен монтаж системы отопления дома с теплыми полами и радиаторами, разводка водопровода и кана-
+                    лизации. Хочу отметить грамотное консультирование
+                    по теме, ничего лишнего не навязывалось. Все работы выполнены по плану по приемлемым ценам.
+                    Нареканий
+                    по качеству на данный момент нет.
+                </p>
+                <p class="feedback-slide__name">Вячеслав</p>
+            </div>
+
+            <img src="./../images/feedback/feedback.png" alt="feedback"
+                srcset="./../images/feedback/feedback.png 1x, ./../images/feedback/feedback@2x.png 2x, ./../images/feedback/feedback@3x.png 3x"
+                class="feedback-img">
+        </div>
+        <div class="swiper-slide feedback-slide">
+            <div class="feedback-slide__text">
+                <p class="feedback-slide__feedback-text">
+                    Выполнен монтаж системы отопления дома с теплыми полами и радиаторами, разводка водопровода и кана-
+                    лизации. Хочу отметить грамотное консультирование
+                    по теме, ничего лишнего не навязывалось. Все работы выполнены по плану по приемлемым ценам.
+                    Нареканий
+                    по качеству на данный момент нет.
+                </p>
+                <p class="feedback-slide__name">Вячеслав</p>
+            </div>
+
+            <img src="./../images/feedback/feedback.png" alt="feedback"
+                srcset="./../images/feedback/feedback.png 1x, ./../images/feedback/feedback@2x.png 2x, ./../images/feedback/feedback@3x.png 3x"
+                class="feedback-img">
+        </div>
+
+    </div>
+    <div class="swiper-button-next">
+        <button class="feedback-next">
+            <img src="./../images/icons/icon_arrow_right_white.svg" alt="icon_arrow_right_white"
+                onmouseout="this.src='./../images/icons/icon_arrow_right_white.svg'"
+                onmouseover="this.src='./../images/icons/icon_arrow_right_black.svg'">
+        </button>
+    </div>
+    <div class="swiper-button-prev">
+        <button class="feedback-prev">
+            <img src="./../images/icons/icon_arrow_left_white.svg" alt="icon_arrow_left_white"
+                onmouseout="this.src='./../images/icons/icon_arrow_left_white.svg'"
+                onmouseover="this.src='./../images/icons/icon_arrow_left_black.svg'">
+        </button>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".feedbackSwiper", {
+        loop: true,
+        navigation: {
+            nextEl: ".feedback-next",
+            prevEl: ".feedback-prev",
+        },
+    });
+</script>

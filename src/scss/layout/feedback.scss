@@ -1,0 +1,24 @@
+.feedback{
+    @include screen-width;
+    background: #272726;
+    padding: 110px 0 0;
+    border-radius: 0px 0px 15px 15px;
+
+    @media(max-width: 700px) {
+        padding: 70px 20px 100px;
+    }
+}
+
+.step-title--dark--feedback{
+    margin-bottom: 0;
+    @media(max-width: 700px){
+        margin-bottom: 20px;
+    }
+}
+
+.feedback-col{
+    @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
