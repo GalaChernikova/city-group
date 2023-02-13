@@ -1,13 +1,108 @@
 .footer {
-  padding: rem(20) 0;
-  background: $blackColor;
-  // .footer__container
-  &__container {
-    display: flex;
-    align-items: center;
-    @include media(510) {
-      flex-direction: column;
-      align-items: flex-start;
+  @include screen-width;
+  background: #FAF9F9;
+  padding: 130px 0 100px;
+  @media(max-width: 1000px) {
+    padding-bottom: 200px;
+  }
+  @media(max-width: 650px) {
+    padding: 97px 20px 200px;
+  }
+}
+
+.footer-links__title {
+  font-family: 'Idealist';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 28px;
+
+  color: #272726;
+  margin-bottom: 17px;
+  @media (max-width: 500px){
+    font-size: 12px;
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
+}
+
+.footer-links__link{
+  font-family: 'Idealist';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #272726;
+  text-decoration: none; 
+  @media (max-width: 500px){
+    line-height: 24px;
+  }
+}
+.footer-address {
+  margin: 0;
+  & p, & a{
+    font-family: 'Idealist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #272726;
+    text-decoration: none;  
+    margin-bottom: 0;  
+  }
+}
+.footer-logo{
+  & p{
+    font-family: 'Idealist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #272726;
+    margin-top: 13px;
+    margin-bottom: 40px;
+    @media (max-width: 500px){
+      font-size: 12px;
+      line-height: 28px;
+      margin-top: 8px;
+      margin-bottom: 52px;
     }
+  }
+  & img {
+    @media (max-width: 500px) {
+      max-width: 150px;
+      width: 100%;
+    }
+  }
+}
+
+.design-link{
+  color: #8C8C8C;
+  text-decoration: none;
+  @media (max-width: 1000px){
+    position: relative;
+    top: 400px;
+  }
+  @media (max-width: 500px){
+    font-size: 12px;
+    line-height: 28px;
+    top: 380px;
+  }
+}
+
+.logo-col{
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+  }
+}
+
+.clients-col{
+  @media (max-width: 1000px){
+    margin-bottom: 35px;
   }
 }
