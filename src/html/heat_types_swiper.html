@@ -1,0 +1,199 @@
+<style>
+    .heatTypesSwiper {
+        width: 80%;
+        height: 100%;
+    }
+
+    .heat-slide {
+        background: #272726;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 38px 40px 80px;
+    }
+
+    .slide--bkg {
+        background-image: url('./../images/heating_bkg/heating_bkg.png');
+        background-image: image-set(url('./../images/heating_bkg/heating_bkg.png') 1x,
+                url('./../images/heating_bkg/heating_bkg@2x.png') 2x,
+                url('./../images/heating_bkg/heating_bkg@3x.png') 3x,
+            );
+        background-size: cover;
+    }
+
+    .heat-slide__title {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 28px;
+
+        color: #FFFFFF;
+        margin-bottom: 32px;
+    }
+
+    .heat-slide__text {
+        font-family: 'Idealist';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+
+        color: #FFFFFF;
+        margin-bottom: 0;
+    }
+
+    .heat-next,
+    .heat-prev {
+        position: relative;
+        /* border: none;
+        background: transparent; */
+        visibility: visible;
+    }
+
+    @media (max-width: 1200px) {
+        .heatTypesSwiper {
+            width: 100%;
+        }
+        .heat-slide {
+            width: 55%;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .heat-slide {
+            width: 75%;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .heat-slide {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .heat-slide__title {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 21px;
+        }
+
+        .heat-slide__text {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .heat-slide {
+            padding: 13px 20px 34px;
+        }
+
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper heatTypesSwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide heat-slide slide--bkg">
+            <h4 class="heat-slide__title">Газовое</h4>
+            <p class="heat-slide__text">+ малое потребление энергии</p>
+            <p class="heat-slide__text">+ простота эксплуатации</p>
+            <p class="heat-slide__text">+ высокая эффективность</p>
+            <p class="heat-slide__text">+ не нуждается в запасе топлива </p>
+            <p class="heat-slide__text">+ способен обогреть огромный дом</p>
+            <br>
+            <p class="heat-slide__text">- нужно разрешение </p>
+            <p class="heat-slide__text">- нужен дымоход и отдельное помещение</p>
+            <p class="heat-slide__text">- необходимо наличие газовой магистрали</p>
+            <p class="heat-slide__text">- дорогое подключение</p>
+            <p class="heat-slide__text">- нужна установка группы безопасности</p>
+        </div>
+        <div class="swiper-slide  heat-slide">
+            <h4 class="heat-slide__title">Твердотопливное</h4>
+            <p class="heat-slide__text">+ рентабельность</p>
+            <p class="heat-slide__text">+ доступность топлива</p>
+            <p class="heat-slide__text">+ экологичность</p>
+            <p class="heat-slide__text">+ высокая энергоэффективность</p>
+            <p class="heat-slide__text">+ долговечность</p>
+            <br>
+            <p class="heat-slide__text">- необходим монтаж дымохода </p>
+            <p class="heat-slide__text">- периодическая закладка топлива</p>
+            <p class="heat-slide__text">- есть технические ограничения</p>
+            <p class="heat-slide__text">- требуется большой запас топлива и место для его хранения</p>
+        </div>
+        <div class="swiper-slide  heat-slide">
+            <h4 class="heat-slide__title">Газовое</h4>
+            <p class="heat-slide__text">+ малое потребление энергии</p>
+            <p class="heat-slide__text">+ простота эксплуатации</p>
+            <p class="heat-slide__text">+ высокая эффективность</p>
+            <p class="heat-slide__text">+ не нуждается в запасе топлива </p>
+            <p class="heat-slide__text">+ способен обогреть огромный дом</p>
+            <br>
+            <p class="heat-slide__text">- нужно разрешение </p>
+            <p class="heat-slide__text">- нужен дымоход и отдельное помещение</p>
+            <p class="heat-slide__text">- необходимо наличие газовой магистрали</p>
+            <p class="heat-slide__text">- дорогое подключение</p>
+            <p class="heat-slide__text">- нужна установка группы безопасности</p>
+        </div>
+        <div class="swiper-slide  heat-slide">
+            <h4 class="heat-slide__title">Твердотопливное</h4>
+            <p class="heat-slide__text">+ рентабельность</p>
+            <p class="heat-slide__text">+ доступность топлива</p>
+            <p class="heat-slide__text">+ экологичность</p>
+            <p class="heat-slide__text">+ высокая энергоэффективность</p>
+            <p class="heat-slide__text">+ долговечность</p>
+            <br>
+            <p class="heat-slide__text">- необходим монтаж дымохода </p>
+            <p class="heat-slide__text">- периодическая закладка топлива</p>
+            <p class="heat-slide__text">- есть технические ограничения</p>
+            <p class="heat-slide__text">- требуется большой запас топлива и место для его хранения</p>
+        </div>
+    </div>
+    <!-- <div class="swiper-button-next">
+        <button class="heat-next">
+            <img src="./../images/icons/icon_black_arrow_right.svg" alt="icon_black_arrow_right"
+                onmouseout="this.src='./../images/icons/icon_black_arrow_right.svg'"
+                onmouseover="this.src='./../images/icons/icon_black_arrow_right_pressed.svg'">
+        </button>
+    </div>
+    <div class="swiper-button-prev">
+        <button class="heat-prev">
+            <img src="./../images/icons/icon_black_arrow_left.svg" alt="icon_black_arrow_left"
+                onmouseout="this.src='./../images/icons/icon_black_arrow_left.svg'"
+                onmouseover="this.src='./../images/icons/icon_black_arrow_left_pressed.svg'">
+        </button>
+    </div> -->
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".heatTypesSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        mousewheel: true,
+        keyboard: true,
+        // navigation: {
+        //     nextEl: ".heat-next",
+        //     prevEl: ".heat-prev",
+        // },
+        breakpoints: {
+            // mobile + tablet - 320-990
+            320: {
+                slidesPerView: "auto",
+                loop: false,
+
+            },
+            // desktop >= 991
+            1200: {
+                slidesPerView: 2,
+
+            }
+        },
+    });
+</script>
